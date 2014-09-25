@@ -3,12 +3,13 @@
   <head>
   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   	<title>My to do list</title>
+  	<link rel="stylesheet" type="text/css" href="public/css/reset.css">
   	<link rel="stylesheet" type="text/css" href="public/css/style.css">
   </head>
   <body>
     <main>
       <header>
-        <h1>DO IT NOW!</h1>
+        <h1>My Shopping List</h1>
       </header>
       <section>
         <nav>
@@ -19,6 +20,7 @@
       </section>
       <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script>
+
         $('document').ready(function() {
 					if(localStorage.getItem('todos') === null) {
 						localStorage.setItem('todos', '')
@@ -89,6 +91,7 @@
             saveTodo(item);
           }
         });
+        
       </script>
   </body>
 </html>
