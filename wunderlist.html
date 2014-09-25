@@ -2,21 +2,22 @@
 <html lang="en">
   <head>
   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  	<title>My to do list</title>
+  	<title>Shopping List</title>
   	<link rel="stylesheet" type="text/css" href="public/css/reset.css">
   	<link rel="stylesheet" type="text/css" href="public/css/style.css">
   </head>
   <body>
     <main>
       <header>
-        <h1>My Shopping List</h1>
+        <h1>Shopping List</h1>
       </header>
       <section>
         <nav>
-          <input type='text' name='todo' placeholder="Add item to your 'to do' list ...">
-          <a href='#' id='add-todo'>Add</a>
+          <input type='text' name='todo' placeholder="Add shopping item then press 'enter' ...">
         </nav>
-        <ul></ul>
+        <div class="shoppinglist">
+          <ul></ul>
+        </div>
       </section>
       <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
       <script>
@@ -91,7 +92,7 @@
             saveTodo(item);
           }
         });
-        
+
       </script>
   </body>
 </html>
