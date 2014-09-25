@@ -8,12 +8,12 @@
   <body>
     <main>
       <header>
-        <h1>MY TO DO LIST</h1>
+        <h1>DO IT NOW!</h1>
       </header>
       <section>
         <nav>
-          <input type='text' name='todo' placeholder='Add an item to your todo'>
-          <a href='#' id='add-todo'>add</a>
+          <input type='text' name='todo' placeholder="Add item to your 'to do' list ...">
+          <a href='#' id='add-todo'>Add</a>
         </nav>
         <ul></ul>
       </section>
@@ -26,19 +26,19 @@
 					if(localStorage.getItem('completed') === null) {
 						localStorage.setItem('completed', '')
 					}
-          window.todos = localStorage.getItem('todos').split(',');
-          window.completed = localStorage.getItem('completed').split(',');
+          window.todos = localStorage.getItem('todos').split(',').reverse();
+          window.completed = localStorage.getItem('completed').split(',').reverse();
           todos.forEach(function(item) {
           		addTodo(item);
           });
           completed.forEach(function(item) {
-          		addTodo(item);
+          		showCompleted(item);
           });          
         });
 
         var addTodo = function(item) {
         	if(item !== "") {
-	          var li = $('<li>').text(item).append('     <a href="#">X</a>');
+	          var li = $('<li>').text(item).append(' <a href="#">X</a>');
 	          li.children().on('click', function() {
 	            li.addClass('completed');
 	            completedTodo(item);
@@ -47,6 +47,14 @@
 	          $('ul').append(li);
 	          $('input').val('');
           };
+        }
+
+        var showCompleted = function(item) {
+        	if(item !== "") {
+	          var li = $('<li>').text(item).append(' <a href="#">X</a>');
+	          li.addClass('completed');
+	          $('ul').append(li);
+	        };
         }
 
         var saveTodo = function(item) {

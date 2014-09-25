@@ -1,7 +1,20 @@
 body {
 	background-color: #E0E4CC;
+	font-family: Georgia, Serif;
+}
+
+input {
+	height: 30px;
+	width: 750px;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
 }
 
 .completed {
 	text-decoration: line-through;
+}
+
+li:first-letter {
+	text-transform: capitalize;
 }
