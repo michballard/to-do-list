@@ -1,3 +1,6 @@
+| [Makers Academy](http://www.makersacademy.com) | Week 8 |
+| ------ | ------ |
+
 Shopping List
 =============
 
